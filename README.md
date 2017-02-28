@@ -1,6 +1,10 @@
 # Android视图绘制原理
+## 概述
 Android系统的视图结构的设计也采用了组合模式，即View作为所有图形的基类，Viewgroup对View继承扩展为视图容器类，由此就得到了视图部分的基本结构--树形结构<br>
 ![image](https://github.com/zhuyuezong/View-Draw/blob/master/images/1343827041_4739.png?raw=true)<br>
+整个绘制流程从ViewRootImp类的performtraversals()方法开始，函数的主要功能是判断是否要重新计算measure，是否要重新布局layou，是否要重新绘制draw
+## 递归调用measure
+
 参考：http://blog.csdn.net/yanbober/article/details/46128379/
 
 
